@@ -27,7 +27,7 @@ method: GET
 
 Use postman to get results
 ```
-url: http://localhost:4000/getrouteplan
+url: http://localhost:4000/api/plantrip
 method: POST 
 content-type: application/json
 body: { "vin": <vin>, "source": <source>, "destination": <destination> }
