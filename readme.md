@@ -15,7 +15,7 @@ docker
 ## Steps to run the application
 
 1. sudo docker build -t mbrdi .
-2. sudo docker run -p 4000:4000 -d mbrdi
+2. sudo docker run -p 4000:4000 -it mbrdi
 
 Here you will get a local ip address. Please open that ip address in browser to check if the api is accessable and working successfully (health check route).
 
