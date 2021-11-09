@@ -6,7 +6,7 @@ Based on Go > gorila mux
 docker 
 
 ## System requrements 
-### for optimal performance 
+### for best performance 
 2 core processor, 512 mb of RAM
 
 ### Minimum requrements 
@@ -14,18 +14,21 @@ docker
 
 ## Steps to run the application
 
-1. sudo docker build -t evpitstops .
-2. sudo docker run -p 5000:5000 -it evpitstops
+1. sudo docker build -t mbrdi .
+2. sudo docker run -p 4000:4000 -d mbrdi
 
 Here you will get a local ip address. Please open that ip address in browser to check if the api is accessable and working successfully (health check route).
 
+Heathcheck api:
+```
+url: http://localhost:4000/api/healthcheck
+method: GET 
+```
+
 Use postman to get results
 ```
-url: http://<IP Address>:5000/getrouteplan
-method: post 
+url: http://localhost:4000/getrouteplan
+method: POST 
 content-type: application/json
 body: { "vin": <vin>, "source": <source>, "destination": <destination> }
 ```
-
-## Run with nodemon
-nodemon --exec go run main.go --signal SIGTERM
